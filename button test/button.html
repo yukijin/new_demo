@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>按钮点击波纹动画</title>
+	
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+	<!-- SVG Sprite -->
+	<div style="height: 0; width: 0; position: absolute; visibility: hidden;" aria-hidden="true">
+		<svg version="1.1" focusable="false">
+			<symbol id="ripply-scott" viewBox="0 0 100 100">
+				<circle id="ripple-shape" cx="1" cy="1" r="1" />
+			</symbol>
+		</svg>
+	</div>
+
+	<div class="content">
+		<button id="js-ripple-btn" class="button styl-material">
+			Click for Ripple
+			<svg class="ripple-obj" id="js-ripple">
+				<use width="100" heigth="100" xlink:href="#ripply-scott"  class="js-ripple"></use>
+			</svg>
+		</button>
+	</div>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/ripple-config.js"></script>
+
+</body>
